@@ -9,20 +9,28 @@ h1 {
   font-style: normal; }
 
 body {
-  background: #eee;
-  margin: 0; }
+  background: #eee; }
 
-@media screen and (max-width: 900px) {
-  a {
-    color: white; } }
+body,
+p,
+li,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0; }
 
 .header {
   background: #2c2c2c;
   border-radius: 0 0 30px 30px; }
   .header .block-container {
     padding-top: 42px;
-    padding-left: 227px;
-    padding-right: 227px; }
+    padding-left: 14vw;
+    padding-right: 14vw; }
+    @media screen and (max-width: 1024px) {
+      .header .block-container {
+        padding-left: 100px;
+        padding-right: 100px; } }
     .header .block-container .top-panel {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -42,6 +50,34 @@ body {
           width: 45px;
           height: 26px;
           margin-right: 78px; }
+        .header .block-container .top-panel .logo-nav .hamburger {
+          position: relative;
+          top: -16px;
+          left: -200px; }
+          .header .block-container .top-panel .logo-nav .hamburger__check {
+            opacity: 0; }
+          .header .block-container .top-panel .logo-nav .hamburger-logo {
+            cursor: pointer; }
+            .header .block-container .top-panel .logo-nav .hamburger-logo span {
+              display: none; }
+              @media screen and (max-width: 1024px) {
+                .header .block-container .top-panel .logo-nav .hamburger-logo span {
+                  display: block;
+                  width: 25px;
+                  height: 4px;
+                  margin-bottom: 5px;
+                  position: relative;
+                  background: #cdcdcd;
+                  border-radius: 3px;
+                  z-index: 3;
+                  -webkit-transform-origin: 4px 0;
+                          transform-origin: 4px 0; }
+                  .header .block-container .top-panel .logo-nav .hamburger-logo span:first-child {
+                    -webkit-transform-origin: 0% 0%;
+                            transform-origin: 0% 0%; }
+                  .header .block-container .top-panel .logo-nav .hamburger-logo span:nth-last-child(2) {
+                    -webkit-transform-origin: 0% 100%;
+                            transform-origin: 0% 100%; } }
         .header .block-container .top-panel .logo-nav .nav__list {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -53,8 +89,11 @@ body {
               -ms-flex-pack: justify;
                   justify-content: space-between;
           line-height: 30px; }
+          @media screen and (max-width: 1024px) {
+            .header .block-container .top-panel .logo-nav .nav__list {
+              display: none; } }
         .header .block-container .top-panel .logo-nav .nav__item {
-          margin-right: 64px; }
+          margin-right: 4vw; }
         .header .block-container .top-panel .logo-nav .nav__link {
           font-family: Poppins, sans-serif;
           font-style: normal;
@@ -64,6 +103,23 @@ body {
           letter-spacing: 3px;
           color: #fff;
           text-decoration: none; }
+      .header .block-container .top-panel .hamburger-checkbox {
+        display: none; }
+        @media screen and (max-width: 1024px) {
+          .header .block-container .top-panel .hamburger-checkbox:checked + .nav__list {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2060f6;
+            padding-top: 100px;
+            padding-left: 40vw;
+            z-index: 2; }
+            .header .block-container .top-panel .hamburger-checkbox:checked + .nav__list .nav__link {
+              font-size: 22px;
+              line-height: 60px; } }
       .header .block-container .top-panel .hire {
         font-family: Poppins, sans-serif;
         font-style: normal;
@@ -75,11 +131,15 @@ body {
         text-decoration: none;
         line-height: 30px; }
     .header .block-container .header-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
       .header .block-container .header-info .text-side {
         -ms-flex-item-align: center;
-            align-self: center; }
+            align-self: center;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 2 auto;
+                flex: 1 2 auto; }
         .header .block-container .header-info .text-side__heading {
           font-family: Poppins, sans-serif;
           font-style: normal;
@@ -87,14 +147,16 @@ body {
           font-size: 64px;
           line-height: 68px;
           letter-spacing: -2px;
-          color: #fff; }
+          color: #fff;
+          padding-bottom: 32px; }
         .header .block-container .header-info .text-side__subheading {
           font-family: "Open Sans", sans-serif;
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
           line-height: 150%;
-          color: #fff; }
+          color: #fff;
+          padding-bottom: 83px; }
         .header .block-container .header-info .text-side__link {
           display: block;
           width: 226px;
@@ -104,17 +166,25 @@ body {
           color: white;
           background: #2060f6;
           border-radius: 8px;
-          text-decoration: none; }
+          text-decoration: none;
+          margin-bottom: 83px; }
       .header .block-container .header-info__img-side {
+        -webkit-box-flex: 2;
+            -ms-flex: 2 1 600px;
+                flex: 2 1 600px;
         background-image: url(../images/upd/header-img.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         height: 680px;
-        width: 43vw;
+        max-width: 43vw;
         position: relative;
-        right: -227px;
+        right: -14vw;
         border-radius: 30px 0; }
+        @media screen and (max-width: 1024px) {
+          .header .block-container .header-info__img-side {
+            right: 0;
+            max-width: 100%; } }
         .header .block-container .header-info__img-side .img-side {
           position: absolute;
           bottom: 48px;
@@ -136,5 +206,17 @@ body {
             line-height: 140%;
             color: #fff;
             max-width: 264px; }
+      @media screen and (max-width: 1024px) {
+        .header .block-container .header-info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
 
 /*# sourceMappingURL=main.css.map */
