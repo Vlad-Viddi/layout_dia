@@ -18,9 +18,13 @@ ul,
 h1,
 h2,
 h3,
+h4,
 a {
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
 
 .header {
   background: #2c2c2c;
@@ -222,13 +226,9 @@ a {
           text-decoration: none;
           margin: 0 auto;
           margin-bottom: 83px;
-          -webkit-transition: background 300ms, -webkit-transform 300ms;
-          transition: background 300ms, -webkit-transform 300ms;
-          transition: background 300ms, transform 300ms;
-          transition: background 300ms, transform 300ms, -webkit-transform 300ms; }
+          -webkit-transition: background 300ms;
+          transition: background 300ms; }
           .header .block-container .header-info .text-side__link:hover {
-            -webkit-transform: scale(1.05);
-                    transform: scale(1.05);
             background: #144ed5; }
       .header .block-container .header-info__img-side {
         -webkit-box-flex: 2;
@@ -325,12 +325,13 @@ a {
             justify-content: space-between; }
     @media screen and (max-width: 1024px) {
       .main-container .expertise__services {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
     .main-container .expertise__services .service {
-      padding: 0 10px; }
+      padding: 0 10px;
+      width: 264px; }
       @media screen and (max-width: 1024px) {
         .main-container .expertise__services .service {
           padding: 20px 0; } }
@@ -356,5 +357,138 @@ a {
         color: #6c788b;
         font-size: 14px;
         text-align: center; }
+
+.main-container .process {
+  margin: 0 auto;
+  padding: 0 14vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 1024px) {
+    .main-container .process {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .main-container .process .info {
+    max-width: 23vw; }
+    @media screen and (max-width: 1024px) {
+      .main-container .process .info {
+        max-width: 100vw; } }
+    .main-container .process .info__subheader {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      color: #253757;
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: 3px;
+      color: #c0cdd7;
+      margin-top: 251px;
+      margin-bottom: 16px; }
+      @media screen and (max-width: 1024px) {
+        .main-container .process .info__subheader {
+          margin-top: 100px; } }
+    .main-container .process .info__main-header {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      color: #253757;
+      font-size: 32px;
+      line-height: 130%;
+      margin-bottom: 24px; }
+    .main-container .process .info__text {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      color: #6c788b;
+      font-size: 14px; }
+      .main-container .process .info__text_top {
+        margin-bottom: 1em; }
+      .main-container .process .info__text:last-child {
+        margin-bottom: 250px; }
+        @media screen and (max-width: 1024px) {
+          .main-container .process .info__text:last-child {
+            margin-bottom: 100px; } }
+  .main-container .process__blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    .main-container .process__blocks .blocks {
+      width: 264px; }
+      .main-container .process__blocks .blocks_shifted {
+        margin-right: 30px;
+        position: relative;
+        top: 132px; }
+      .main-container .process__blocks .blocks .block {
+        height: 264px;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 32px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        position: relative; }
+        .main-container .process__blocks .blocks .block:last-child {
+          margin-top: 30px; }
+        .main-container .process__blocks .blocks .block__number {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%;
+          color: #253757;
+          font-size: 13px;
+          line-height: 24px;
+          color: #2060f6;
+          padding: 2px 12px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          width: 46px;
+          height: 24px;
+          background-color: #eee;
+          border-radius: 23px;
+          margin-bottom: 24px; }
+        .main-container .process__blocks .blocks .block__text {
+          font-family: "Open Sans", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%;
+          color: #6c788b;
+          font-size: 13px;
+          margin-bottom: 32px; }
+        .main-container .process__blocks .blocks .block__link {
+          position: absolute;
+          bottom: 32px; }
+          .main-container .process__blocks .blocks .block__link .arrow-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2060f6;
+            line-height: 45px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 16px; }
+            .main-container .process__blocks .blocks .block__link .arrow-img__img {
+              width: 16px;
+              height: 16px; }
+        .main-container .process__blocks .blocks .block a {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%;
+          color: #253757;
+          font-size: 15px; }
 
 /*# sourceMappingURL=main.css.map */
