@@ -17,8 +17,10 @@ li,
 ul,
 h1,
 h2,
-h3 {
-  margin: 0; }
+h3,
+a {
+  margin: 0;
+  padding: 0; }
 
 .header {
   background: #2c2c2c;
@@ -46,10 +48,21 @@ h3 {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start; }
-        .header .block-container .top-panel .logo-nav__logo img {
-          width: 45px;
-          height: 26px;
-          margin-right: 78px; }
+        .header .block-container .top-panel .logo-nav__logo {
+          line-height: 30px;
+          margin-bottom: -4px; }
+          .header .block-container .top-panel .logo-nav__logo img {
+            width: 45px;
+            height: 26px;
+            margin-right: 78px;
+            -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+            transition: opacity 300ms, -webkit-transform 300ms;
+            transition: transform 300ms, opacity 300ms;
+            transition: transform 300ms, opacity 300ms, -webkit-transform 300ms; }
+            .header .block-container .top-panel .logo-nav__logo img:hover {
+              -webkit-transform: scale(1.05);
+                      transform: scale(1.05);
+              opacity: 0.8; }
         .header .block-container .top-panel .logo-nav .hamburger {
           position: relative;
           top: -16px;
@@ -102,7 +115,20 @@ h3 {
           line-height: 150%;
           letter-spacing: 3px;
           color: #fff;
-          text-decoration: none; }
+          text-decoration: none;
+          margin-bottom: 2px;
+          -webkit-transition: opacity 300ms;
+          transition: opacity 300ms; }
+          .header .block-container .top-panel .logo-nav .nav__link:hover {
+            opacity: 0.8; }
+            .header .block-container .top-panel .logo-nav .nav__link:hover::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: #2060f6;
+              border-radius: 50%;
+              margin-bottom: -2px; }
       .header .block-container .top-panel .hamburger-checkbox {
         display: none; }
         @media screen and (max-width: 1024px) {
@@ -129,21 +155,40 @@ h3 {
         letter-spacing: 3px;
         color: #fff;
         text-decoration: none;
-        line-height: 30px; }
+        margin-bottom: 2px;
+        line-height: 30px;
+        margin-bottom: -2px;
+        -webkit-transition: opacity 300ms;
+        transition: opacity 300ms; }
+        .header .block-container .top-panel .hire:hover {
+          opacity: 0.8; }
+          .header .block-container .top-panel .hire:hover::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #2060f6;
+            border-radius: 4px; }
     .header .block-container .header-info {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
       .header .block-container .header-info .text-side {
         -ms-flex-item-align: center;
             align-self: center;
+        text-align: center;
         -webkit-box-flex: 1;
             -ms-flex: 1 2 auto;
                 flex: 1 2 auto; }
         .header .block-container .header-info .text-side__heading {
-          font-family: Poppins, sans-serif;
+          font-family: "Poppins", sans-serif;
           font-style: normal;
           font-weight: 600;
+          line-height: 150%;
+          color: #253757;
           font-size: 64px;
           line-height: 68px;
           letter-spacing: -2px;
@@ -152,12 +197,20 @@ h3 {
         .header .block-container .header-info .text-side__subheading {
           font-family: "Open Sans", sans-serif;
           font-style: normal;
+          font-weight: 600;
+          line-height: 150%;
+          color: #6c788b;
           font-weight: normal;
           font-size: 18px;
-          line-height: 150%;
           color: #fff;
           padding-bottom: 83px; }
         .header .block-container .header-info .text-side__link {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%;
+          color: #253757;
+          font-size: 15px;
           display: block;
           width: 226px;
           height: 50px;
@@ -167,7 +220,16 @@ h3 {
           background: #2060f6;
           border-radius: 8px;
           text-decoration: none;
-          margin-bottom: 83px; }
+          margin: 0 auto;
+          margin-bottom: 83px;
+          -webkit-transition: background 300ms, -webkit-transform 300ms;
+          transition: background 300ms, -webkit-transform 300ms;
+          transition: background 300ms, transform 300ms;
+          transition: background 300ms, transform 300ms, -webkit-transform 300ms; }
+          .header .block-container .header-info .text-side__link:hover {
+            -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
+            background: #144ed5; }
       .header .block-container .header-info__img-side {
         -webkit-box-flex: 2;
             -ms-flex: 2 1 600px;
@@ -177,7 +239,7 @@ h3 {
         background-position: center;
         background-size: cover;
         height: 680px;
-        max-width: 43vw;
+        min-width: 43vw;
         position: relative;
         right: -14vw;
         border-radius: 30px 0; }
@@ -197,10 +259,14 @@ h3 {
             line-height: 150%;
             letter-spacing: 3px;
             color: #fff;
-            text-decoration: none; }
+            text-decoration: none;
+            margin-bottom: 2px; }
           .header .block-container .header-info__img-side .img-side__subheading {
             font-family: "Open Sans", sans-serif;
             font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            color: #6c788b;
             font-weight: normal;
             font-size: 14px;
             line-height: 140%;
@@ -218,5 +284,77 @@ h3 {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; } }
+
+.main-container .about-info {
+  margin: 148px 14vw; }
+  .main-container .about-info__header {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: #253757;
+    font-size: 52px; }
+  .main-container .about-info__text {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: #6c788b;
+    font-size: 24px; }
+
+.main-container .expertise {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30px;
+  padding: 128px 14vw 134px; }
+  .main-container .expertise__heading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: #253757;
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 64px; }
+  .main-container .expertise__services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media screen and (max-width: 1024px) {
+      .main-container .expertise__services {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .main-container .expertise__services .service {
+      padding: 0 10px; }
+      @media screen and (max-width: 1024px) {
+        .main-container .expertise__services .service {
+          padding: 20px 0; } }
+      .main-container .expertise__services .service__pict {
+        text-align: center; }
+        .main-container .expertise__services .service__pict img {
+          border-radius: 16px;
+          margin-bottom: 40px; }
+      .main-container .expertise__services .service__header {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        color: #253757;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 16px; }
+      .main-container .expertise__services .service__text {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        color: #6c788b;
+        font-size: 14px;
+        text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
