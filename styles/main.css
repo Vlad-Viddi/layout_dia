@@ -66,9 +66,9 @@ a {
                       transform: scale(1.05);
               opacity: 0.8; }
         .header .block-container .top-panel .logo-nav .hamburger {
-          position: relative;
-          top: -16px;
-          right: 1px; }
+          position: absolute;
+          top: 27px;
+          right: 100px; }
           .header .block-container .top-panel .logo-nav .hamburger__check {
             opacity: 0; }
           .header .block-container .top-panel .logo-nav .hamburger-logo {
