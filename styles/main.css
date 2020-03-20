@@ -510,34 +510,36 @@ a {
           line-height: 40px;
           width: 159px;
           border-radius: 20px; }
-          .main-container .process__blocks .blocks .block__link .arrow-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #2060f6;
-            line-height: 45px;
-            text-align: center;
-            display: inline-block;
-            margin-right: 16px;
-            -webkit-transition: -webkit-transform 300ms;
-            transition: -webkit-transform 300ms;
-            transition: transform 300ms;
-            transition: transform 300ms, -webkit-transform 300ms; }
-            .main-container .process__blocks .blocks .block__link .arrow-img__img {
-              width: 16px;
-              height: 16px; }
-          .main-container .process__blocks .blocks .block__link:hover .arrow-img {
-            -webkit-transform: scale(1.2);
-                    transform: scale(1.2); }
-          .main-container .process__blocks .blocks .block__link p {
-            font-family: "Poppins", sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 150%;
-            color: #253757;
-            font-size: 15px;
-            position: relative;
-            bottom: 2px;
-            display: inline-block; }
+          .main-container .process__blocks .blocks .block__link a {
+            display: block; }
+            .main-container .process__blocks .blocks .block__link a .arrow-img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: #2060f6;
+              line-height: 45px;
+              text-align: center;
+              display: inline-block;
+              margin-right: 16px;
+              -webkit-transition: -webkit-transform 300ms;
+              transition: -webkit-transform 300ms;
+              transition: transform 300ms;
+              transition: transform 300ms, -webkit-transform 300ms; }
+              .main-container .process__blocks .blocks .block__link a .arrow-img__img {
+                width: 16px;
+                height: 16px; }
+            .main-container .process__blocks .blocks .block__link a:hover .arrow-img {
+              -webkit-transform: scale(1.2);
+                      transform: scale(1.2); }
+            .main-container .process__blocks .blocks .block__link a p {
+              font-family: "Poppins", sans-serif;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 150%;
+              color: #253757;
+              font-size: 15px;
+              position: relative;
+              bottom: 2px;
+              display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
