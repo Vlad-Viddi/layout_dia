@@ -59,10 +59,8 @@ a {
             width: 45px;
             height: 26px;
             margin-right: 78px;
-            -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-            transition: opacity 300ms, -webkit-transform 300ms;
-            transition: transform 300ms, opacity 300ms;
-            transition: transform 300ms, opacity 300ms, -webkit-transform 300ms; }
+            -webkit-transition: all 300ms;
+            transition: all 300ms; }
             .header .block-container .top-panel .logo-nav__logo img:hover {
               -webkit-transform: scale(1.05);
                       transform: scale(1.05);
@@ -125,13 +123,24 @@ a {
           transition: opacity 300ms; }
           .header .block-container .top-panel .logo-nav .nav__link:hover {
             opacity: 0.8; }
-            .header .block-container .top-panel .logo-nav .nav__link:hover::after {
-              content: "";
-              display: block;
-              width: 100%;
-              height: 2px;
-              background: #2060f6;
-              margin-bottom: -2px; }
+          .header .block-container .top-panel .logo-nav .nav__link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #2060f6;
+            border-radius: 50%;
+            opacity: 0;
+            position: relative;
+            top: -5px;
+            -webkit-transition: all 500ms;
+            transition: all 500ms; }
+          .header .block-container .top-panel .logo-nav .nav__link:hover::after {
+            opacity: 1;
+            width: 100%;
+            top: 0;
+            -webkit-transition: all 500ms;
+            transition: all 500ms; }
       .header .block-container .top-panel .hamburger-checkbox {
         display: none; }
         @media screen and (max-width: 1024px) {
@@ -165,12 +174,24 @@ a {
         transition: opacity 300ms; }
         .header .block-container .top-panel .hire:hover {
           opacity: 0.8; }
-          .header .block-container .top-panel .hire:hover::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: #2060f6; }
+        .header .block-container .top-panel .hire::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #2060f6;
+          border-radius: 50%;
+          opacity: 0;
+          position: relative;
+          top: -5px;
+          -webkit-transition: all 500ms;
+          transition: all 500ms; }
+        .header .block-container .top-panel .hire:hover::after {
+          opacity: 1;
+          width: 100%;
+          top: 0;
+          -webkit-transition: all 500ms;
+          transition: all 500ms; }
     .header .block-container .header-info {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -328,16 +349,32 @@ a {
         -ms-flex-pack: distribute;
             justify-content: space-around; } }
     .main-container .expertise__services .service {
-      padding: 0 10px;
-      width: 264px; }
+      padding: 10px;
+      width: 264px;
+      border-radius: 10px;
+      -webkit-transition: all 300ms;
+      transition: all 300ms; }
+      .main-container .expertise__services .service:hover {
+        background-color: rgba(213, 213, 213, 0.2); }
+        .main-container .expertise__services .service:hover img {
+          -webkit-transform: scale(1.1);
+                  transform: scale(1.1); }
       @media screen and (max-width: 1024px) {
         .main-container .expertise__services .service {
           padding: 20px 0; } }
       .main-container .expertise__services .service__pict {
-        text-align: center; }
-        .main-container .expertise__services .service__pict img {
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 40px; }
+        .main-container .expertise__services .service__pict .try {
+          display: inline-block;
+          overflow: hidden;
           border-radius: 16px;
-          margin-bottom: 40px; }
+          height: 166px; }
+          .main-container .expertise__services .service__pict .try img {
+            border-radius: 16px;
+            -webkit-transition: 300ms;
+            transition: 300ms; }
       .main-container .expertise__services .service__header {
         font-family: "Poppins", sans-serif;
         font-style: normal;
@@ -468,7 +505,11 @@ a {
           margin-bottom: 32px; }
         .main-container .process__blocks .blocks .block__link {
           position: absolute;
-          bottom: 32px; }
+          bottom: 32px;
+          height: 40px;
+          line-height: 40px;
+          width: 159px;
+          border-radius: 20px; }
           .main-container .process__blocks .blocks .block__link .arrow-img {
             width: 40px;
             height: 40px;
@@ -477,16 +518,26 @@ a {
             line-height: 45px;
             text-align: center;
             display: inline-block;
-            margin-right: 16px; }
+            margin-right: 16px;
+            -webkit-transition: -webkit-transform 300ms;
+            transition: -webkit-transform 300ms;
+            transition: transform 300ms;
+            transition: transform 300ms, -webkit-transform 300ms; }
             .main-container .process__blocks .blocks .block__link .arrow-img__img {
               width: 16px;
               height: 16px; }
-        .main-container .process__blocks .blocks .block a {
-          font-family: "Poppins", sans-serif;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 150%;
-          color: #253757;
-          font-size: 15px; }
+          .main-container .process__blocks .blocks .block__link:hover .arrow-img {
+            -webkit-transform: scale(1.2);
+                    transform: scale(1.2); }
+          .main-container .process__blocks .blocks .block__link p {
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            color: #253757;
+            font-size: 15px;
+            position: relative;
+            bottom: 2px;
+            display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
