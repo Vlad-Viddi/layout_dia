@@ -44,8 +44,8 @@ a {
     max-width: 1600px; }
   .header .block-container {
     padding-top: 42px;
-    padding-left: 227px;
-    padding-right: 227px; }
+    padding-left: 14vw;
+    padding-right: 14vw; }
     @media screen and (max-width: 1024px) {
       .header .block-container {
         padding-left: 50px;
@@ -161,6 +161,9 @@ a {
           @media screen and (min-width: 1024px) {
             .header .block-container .top-panel .logo-nav .nav .hire {
               margin-left: 8vw; } }
+          @media screen and (min-width: 1601px) {
+            .header .block-container .top-panel .logo-nav .nav .hire {
+              margin-left: 158px; } }
       .header .block-container .top-panel .hamburger-checkbox {
         display: none; }
         @media screen and (max-width: 1024px) {
@@ -245,14 +248,17 @@ a {
         background-size: cover;
         min-width: 43vw;
         position: relative;
-        right: -227px;
+        right: -14vw;
         border-radius: 30px 0; }
         @media screen and (max-width: 1024px) {
           .header .block-container .header-info__img-side {
             right: 0;
             width: 100%;
             border-radius: 30px; } }
-        @media screen and (min-width: 1600px) {
+        @media screen and (min-width: 1601px) {
+          .header .block-container .header-info__img-side {
+            border-radius: 30px; } }
+        @media screen and (min-width: 2000px) {
           .header .block-container .header-info__img-side {
             right: 0;
             width: 80%;
