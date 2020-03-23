@@ -300,6 +300,9 @@ a {
 
 .main-container .about-info {
   margin: 148px 14vw; }
+  @media screen and (max-width: 1024px) {
+    .main-container .about-info {
+      margin: 50px; } }
   .main-container .about-info__header {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -326,6 +329,9 @@ a {
   background: #fff;
   border-radius: 30px;
   padding: 128px 14vw 134px; }
+  @media screen and (max-width: 1024px) {
+    .main-container .expertise {
+      padding: 50px; } }
   .main-container .expertise__heading {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -656,6 +662,9 @@ a {
 
 .main-container .testimonials {
   padding: 148px 14vw; }
+  @media screen and (max-width: 1024px) {
+    .main-container .testimonials {
+      padding: 50px; } }
   .main-container .testimonials__subheader {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -760,7 +769,8 @@ a {
   position: relative; }
   @media screen and (max-width: 1024px) {
     .main-container .components {
-      padding: 20px; } }
+      padding: 20px;
+      text-align: center; } }
   .main-container .components__header {
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -1117,7 +1127,7 @@ a {
         transition: -webkit-transform 300ms;
         transition: transform 300ms;
         transition: transform 300ms, -webkit-transform 300ms;
-        margin: 10px 20px; }
+        margin: 10px; }
         .footer .forms .contact__socials-icons .socials-icon:hover {
           -webkit-transform: scale(1.2);
                   transform: scale(1.2); }
