@@ -91,20 +91,22 @@ a {
               opacity: 0.8; }
         .header .block-container .top-panel .logo-nav .hamburger {
           position: absolute;
-          top: 42px;
-          right: 100px; }
+          top: 2px;
+          margin-right: -30px;
+          padding: 20px;
+          display: inline-block;
+          z-index: 99; }
           @media screen and (max-width: 1024px) {
             .header .block-container .top-panel .logo-nav .hamburger {
               right: 50px; } }
           @media screen and (max-width: 400px) {
             .header .block-container .top-panel .logo-nav .hamburger {
               right: 10px; } }
-          .header .block-container .top-panel .logo-nav .hamburger__check {
-            opacity: 0;
-            position: absolute;
-            top: -100%; }
           .header .block-container .top-panel .logo-nav .hamburger-logo {
-            cursor: pointer; }
+            cursor: pointer;
+            display: inline-block;
+            padding: 20px;
+            z-index: 99; }
             .header .block-container .top-panel .logo-nav .hamburger-logo span {
               display: none; }
               @media screen and (max-width: 1024px) {
@@ -179,7 +181,9 @@ a {
             .header .block-container .top-panel .logo-nav .nav .hire {
               margin-left: 158px; } }
       .header .block-container .top-panel .hamburger-checkbox {
-        display: none; }
+        opacity: 0;
+        position: absolute;
+        top: -100%; }
         @media screen and (max-width: 1024px) {
           .header .block-container .top-panel .hamburger-checkbox:checked + .nav__list {
             display: block;
@@ -805,6 +809,9 @@ a {
           .main-container .approach-outter .approach-inner .approach-photo {
             max-width: 100%;
             border-radius: 30px; } }
+        @media screen and (max-width: 600px) {
+          .main-container .approach-outter .approach-inner .approach-photo {
+            display: none; } }
         @media screen and (min-width: 1600px) {
           .main-container .approach-outter .approach-inner .approach-photo {
             border-radius: 30px 0; } }
@@ -849,10 +856,13 @@ a {
           justify-content: space-around; }
       @media screen and (max-width: 1024px) {
         .main-container .testimonials__feedbacks {
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-          -ms-flex-pack: distribute;
-              justify-content: space-around; } }
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
       .main-container .testimonials__feedbacks .feedback {
         background: #fff;
         -webkit-box-shadow: 0 9px 18px rgba(37, 41, 49, 0.03);
