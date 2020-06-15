@@ -1,4 +1,6 @@
-# Dia landing page
+## You can see files in SRC folder
+
+<!--# Dia landing page
 Implement landing page according to [Figma design](https://www.figma.com/file/vhfzZ7SqWGkMGd5iCDdBCy/Dia-New?node-id=0%3A1) - Use BEM and SCSS
 - Large screens 2560px
 - Full HD 1920px
@@ -6,7 +8,7 @@ Implement landing page according to [Figma design](https://www.figma.com/file/vh
 - Notebook 1280px
 - Tablet 1024
 - Mobile (> 320px)
-
+<!--
 1. Implement the header with `nav`.
 1. Implement `Strategic agency` block.
 1. Implement slider (You may start with a single picture).
@@ -24,7 +26,7 @@ Implement landing page according to [Figma design](https://www.figma.com/file/vh
 1. Implement `Contact us`.
 1. Implement the footer.
 1. Adopt the page to mobile screens.
-
+<!--
 ## Instructions
 1. **Fork** the repo.
 2. **Clone** the forked one. (The project link should have your name but not `mate-academy`)
@@ -41,5 +43,5 @@ Implement landing page according to [Figma design](https://www.figma.com/file/vh
 13. Replace `<your_account>` with your Github username in the
   [DEMO LINK](https://<your_account>.github.io/layout_dia/).
 14. Copy `DEMO LINK` to the PR description.
-
+<!--
 > To update you PR repeat steps 7-11.
